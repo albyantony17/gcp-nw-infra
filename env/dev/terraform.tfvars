@@ -45,3 +45,4 @@ vpn = {
 }
 
 external_lb = { vpc = "vpc-1"}
+internal_lb = { vpc ="vpc1", subnet = "vpc1-subnet" }

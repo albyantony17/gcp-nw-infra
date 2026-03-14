@@ -50,3 +50,7 @@ variable "vpn" {
 variable "external_lb" {
   type = object({ vpc= string })
 }
+
+variable "internal_lb" {
+  type = object({ vapc = string, subnet = string})
+}

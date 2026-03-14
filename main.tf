@@ -50,3 +50,10 @@ module "external_lb" {
   network   = module.vpcs[var.external_lb.vpc].vpc_id
   zone      = var.zone
 }
+
+module "internal_lb" {
+  source    = "./modules/internal_lb"
+  network   = module.vpcs[var.internal_lb.vpc].vpc_id
+  subnet    = var.internal_lb.subnet
+  region    = var.region
+}
