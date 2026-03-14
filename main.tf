@@ -34,7 +34,7 @@ module "cloud_nat" {
 
 module "vpn" {
   source        = "./modules/cloud_vpn"
-  vpc           = var.vpc
+  vpc           = var.vpcs
   gateway_name  = var.vpn.gateway_name
   network       = module.vpcs[var.vpn.vpc].vpc_id
   region        = var.region
