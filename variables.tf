@@ -30,3 +30,7 @@ variable "machine_type" {
 variable "image" {
   type = string
 }
+
+variable "cloud_nat" {
+  type = object({ router_name = string, nat_name = string, vpc = string})
+}

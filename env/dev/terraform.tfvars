@@ -31,3 +31,5 @@ vms = {
     tags   = ["app"]
   }
 }  
+
+cloud_nat = { router_name = "nat_router", nat_name = "cloud_nat", vpc = "vpc1"}

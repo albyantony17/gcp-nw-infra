@@ -23,3 +23,11 @@ module "vm" {
   tags         = each.value.tags
   image        = var.image
 }
+
+module "cloud_nat" {
+  source    =./modules/cloud_nat
+  router_name = var.cloud_nat.router_name
+  nat_name    = var.cloud_nat.nat_name
+  network     = module.vpcs[var.cloud_nat.vpc].vpc_id
+  region      = var.region
+}
