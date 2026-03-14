@@ -13,3 +13,5 @@ vpcs = {
     subnets = [{ name = "onprem-subnet", cidr = "10.2.1.0/24", region = "us-central1" }]
   }
 }
+
+vpc_peering = { vpc_a = "vpc-1", vpc_b = "vpc-2" }

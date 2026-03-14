@@ -11,3 +11,7 @@ variable "vpcs" {
     }))
   }))
 }
+
+variable "vpc_peering" {
+  type = object({ vpc_a = string, vpc_b = string })
+}
