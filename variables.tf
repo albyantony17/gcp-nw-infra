@@ -56,5 +56,5 @@ variable "internal_lb" {
 }
 
 variable "dns" {
-  type = object ({ public_domine = string, private_domain = string, vpc = string})
+  type = object ({ public_domain = string, private_domain = string, vpc = string})
 }
