@@ -1,6 +1,6 @@
 resource "google_dns_managed_zone" "public" {
   name     = "public-zone"
-  dns_name = var.domain_name
+  dns_name = var.public_domine
 }
 
 resource "google_dns_record_set" "lb_a_record" {
