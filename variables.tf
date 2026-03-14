@@ -52,5 +52,5 @@ variable "external_lb" {
 }
 
 variable "internal_lb" {
-  type = object({ vapc = string, subnet = string})
+  type = object({ vpc = string, subnet = string})
 }
