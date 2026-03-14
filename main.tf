@@ -8,6 +8,6 @@ module "vpcs" {
 
 module "vpc_peering" {
   source = "./modules/vpc_peering"
-  vpc_a  = module.vpcs[var.vpc_peering.vpc_a].self_link
-  vpc_b  = module.vpcs[var.vpc_peering.vpc_b].self_link
+  vpc_a  = module.vpcs[var.vpc_peering.vpc_a].vpc_self_link
+  vpc_b  = module.vpcs[var.vpc_peering.vpc_b].vpc_self_link
 }
