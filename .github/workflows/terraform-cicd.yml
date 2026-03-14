@@ -1,1 +1,41 @@
+name: 'Terraform Plan and Apply'
 
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  id-token: write
+  actions: read
+
+jobs:
+  terraform:
+    name: 'Terraform Plan and Aplly'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Checkout Github repository'
+      uses: actions/checkout@v3
+
+    - name: 'Set up google Cloud authentication'
+      uses: google-github-actions/auth@v1
+      with:
+        workload_identity_provider: 'projects/946814556691/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+        service_account: 'terraform-network@deft-apparatus-490107-c8.iam.gserviceaccount.com'
+
+    - name: 'Setip Terraform'
+      uses: hashicrop/setup-terraform@v2
+
+    - name: 'Terraform Init'
+      runs: terraform Init
+
+    - name: 'Terraform Plan'
+      runs: terrafon Plan
+
+#    - name: 'Terraform Aplly'
+#      runs: terraform apply -auto-approve
+
+#    - name: 'Terraform Output'
+#      runs: terraform output              

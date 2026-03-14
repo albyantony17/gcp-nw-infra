@@ -1,0 +1,14 @@
+terraform {
+  required_version = ">=1.5
+
+  required_providers {
+    google ={
+        source = "hashicrop/google"
+        version ="~> 4.0"
+    }
+  }
+  backend "gcs" {
+    bucket = "terraform-state-gcp-networking"
+    prefix = "networking/dev"
+  }
+}
