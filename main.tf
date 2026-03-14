@@ -17,9 +17,9 @@ module "vm" {
   for_each = var.vms
 
   name      = each.key
-  machine_type = each.machine_type
+  machine_type = var.machine_type
   zone         = each.value.zone
   subnet       = each.value.subnet
   tags         = each.value.tags
-  image        = each.value.image
+  image        = var.image
 }
