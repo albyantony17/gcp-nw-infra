@@ -1,0 +1,9 @@
+variable "gateway_name" {}
+variable "vpc" {}
+variable "network" {}
+variable "region" {}
+variable "peer_ip" {}
+variable "tunnel_name" {}
+variable "shared_secret" {}
+variable "local_cidr" {}
+variable "remote_cidr" {}

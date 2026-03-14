@@ -33,3 +33,13 @@ vms = {
 }  
 
 cloud_nat = { router_name = "nat-router", nat_name = "cloud-nat", vpc = "vpc-1"}
+
+vpn = {
+  gateway_name  = "vpn-gateway"
+  vpc           = "vpc-1"
+  peer_ip       = "1.1.1.1"
+  shared_secret = "terraformvpn"
+  tunnel_name   = "vpn-tunal1"
+  local_cidr    = ["10.0.0.0/16"]
+  remote_cidr   = ["10.2.0.0/16"]
+}

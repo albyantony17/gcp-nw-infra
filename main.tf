@@ -31,3 +31,16 @@ module "cloud_nat" {
   network     = module.vpcs[var.cloud_nat.vpc].vpc_id
   region      = var.region
 }
+
+module "vpn" {
+  source        = "./modules/cloud_vpn"
+  vpc           = var.vpc
+  gateway_name  = var.vpn.gateway_name
+  network       = module.vpcs[var.vpn.vpc].vpc_id
+  region        = var.region
+  peer_ip       = var.vpn.peer_ip
+  shared_secret = var.vpn.shared_secret
+  tunnel_name   = var.vpn.tunnel_name
+  local_cidr    = var.vpn.local_cidr
+  remote_cidr   = var.vpn.remote_cidr
+}

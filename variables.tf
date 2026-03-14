@@ -34,3 +34,15 @@ variable "image" {
 variable "cloud_nat" {
   type = object({ router_name = string, nat_name = string, vpc = string})
 }
+
+variable "vpn" {
+  type = object({
+    gateway_name  = string
+    vpc           = string
+    peer_ip       = string
+    shared_secret = string
+    tunnel_name   = string
+    local_cidr    = list(string)
+    remote_cidr   = list(string)
+  })
+}
