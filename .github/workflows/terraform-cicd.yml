@@ -32,7 +32,7 @@ jobs:
       run: terraform init
 
     - name: 'Terraform Plan'
-      run: terraform plan
+      run: terraform plan -var-file=env/dev/terraform.tfvars
 
     # Uncomment below if you want automatic apply
     # - name: 'Terraform Apply'
