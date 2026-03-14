@@ -15,3 +15,19 @@ vpcs = {
 }
 
 vpc_peering = { vpc_a = "vpc-1", vpc_b = "vpc-2" }
+
+machine_type = "e2-micro"
+image = "debian-cloud/debian-12"
+
+vms = {
+  vm1 = {
+    zone   = "us-central1-a"
+    subnet = "subnet-1"
+    tahs   = ["web"]  
+  }
+  vm2 = {
+    zone   = "us-central1-b"
+    subnet = "subnet-2"
+    tags   = ["app"]
+  }
+}  

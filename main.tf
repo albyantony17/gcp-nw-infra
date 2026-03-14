@@ -11,3 +11,15 @@ module "vpc_peering" {
   vpc_a  = module.vpcs[var.vpc_peering.vpc_a].vpc_self_link
   vpc_b  = module.vpcs[var.vpc_peering.vpc_b].vpc_self_link
 }
+
+module "vm" {
+  source = "./modules/vm"
+  for_each = var.vms
+
+  name      = each.key
+  machine_type = each.machine_type
+  zone         = each.value.zone
+  subnet       = each.value.subnet
+  tags         = each.value.tags
+  image        = each.value.image
+}
