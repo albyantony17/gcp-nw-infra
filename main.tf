@@ -76,3 +76,10 @@ module "dns" {
   lb_ip          = module.external_lb.lb_ip
   network        = module.vpcs["var.dns.vpc"].vpc_id
 }
+
+module "firewall" {
+  source          = "./modules/firewall"
+  network         = module.vpcs["vpc-1"].vpc_id
+  target_tags     = ["web"]
+  my_ip           =" YOUR_PUBLIC_IP/32"
+}
