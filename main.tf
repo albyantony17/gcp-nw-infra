@@ -58,3 +58,13 @@ module "internal_lb" {
   region    = var.region
   zone      = var.zone
 }
+
+module "custom_route" {
+  source          ="./modules/routes"
+  router_name             = "vm-router-route"
+  network                 = module.vpcs["vpc-1"].vpc_id
+  dest_range              = "0.0.0.0/0"
+  next_hop_instance       = module.vm.vm1.name
+  next_hop_instance_zone  = module.vm.vm1.zone
+  priority                = 900
+}
