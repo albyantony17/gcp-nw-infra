@@ -71,7 +71,7 @@ module "custom_route" {
 
 module "dns" {
   source = "./modules/dns"
-  domain_name    = var.dns.public_domain
+  domain_name    = var.dns.domain_name
   private_domain = var.dns.private_domain
   lb_ip          = module.external_lb.lb_ip
   network        = module.vpcs["var.dns.vpc"].vpc_id
