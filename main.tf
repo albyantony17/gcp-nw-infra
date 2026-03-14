@@ -68,3 +68,11 @@ module "custom_route" {
   next_hop_instance_zone  = module.vm["vm1"].zone
   priority                = 900
 }
+
+module "dns" {
+  source = "./modules/dns"
+  domain_name    = var.dns.public_domain
+  private_domain = var.dns.private_domain
+  lb_ip          = module.external_lb.lb_ip
+  network        = module.vpcs["var.dns.vpc"].vpc_id
+}

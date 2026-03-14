@@ -46,3 +46,5 @@ vpn = {
 
 external_lb = { vpc = "vpc-1"}
 internal_lb = { vpc ="vpc-1", subnet = "vpc1-subnet" }
+
+dns = { public_domain = "example.com.", private_domain = "internal.example.com.", vpc= "vpc-1"}

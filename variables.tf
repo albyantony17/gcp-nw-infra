@@ -54,3 +54,7 @@ variable "external_lb" {
 variable "internal_lb" {
   type = object({ vpc = string, subnet = string})
 }
+
+variable "dns" {
+  type = object ({ public_domine = string, private_domain = string, vpc = string})
+}
