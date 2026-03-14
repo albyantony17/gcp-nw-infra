@@ -32,4 +32,4 @@ vms = {
   }
 }  
 
-cloud_nat = { router_name = "nat_router", nat_name = "cloud_nat", vpc = "vpc-1"}
+cloud_nat = { router_name = "nat-router", nat_name = "cloud-nat", vpc = "vpc-1"}
