@@ -56,4 +56,5 @@ module "internal_lb" {
   network   = module.vpcs[var.internal_lb.vpc].vpc_id
   subnet    = var.internal_lb.subnet
   region    = var.region
+  zone      = var.zone
 }
