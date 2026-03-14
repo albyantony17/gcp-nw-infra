@@ -23,7 +23,7 @@ vms = {
   vm1 = {
     zone   = "us-central1-a"
     subnet = "subnet-1"
-    tahs   = ["web"]  
+    tags   = ["web"]  
   }
   vm2 = {
     zone   = "us-central1-b"
