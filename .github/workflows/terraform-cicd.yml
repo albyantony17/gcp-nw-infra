@@ -36,7 +36,7 @@ jobs:
 
     # Uncomment below if you want automatic apply
     # - name: 'Terraform Apply'
-    #   run: terraform apply -auto-approve
+    #   run: terraform apply -var-file=env/dev/terraform.tfvars -auto-approve
 
     # - name: 'Terraform Output'
     #   run: terraform output
