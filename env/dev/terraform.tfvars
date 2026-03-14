@@ -43,3 +43,5 @@ vpn = {
   local_cidr    = ["10.0.0.0/16"]
   remote_cidr   = ["10.2.0.0/16"]
 }
+
+external_lb = { vpc = "vpc-1"}

@@ -44,3 +44,9 @@ module "vpn" {
   local_cidr    = var.vpn.local_cidr
   remote_cidr   = var.vpn.remote_cidr
 }
+
+module "external_lb" {
+  source    = "./modules/external_lb"
+  network   = module.vpcs[var.external_lb.vpc].vpc_id
+  zone      = var.zone
+}

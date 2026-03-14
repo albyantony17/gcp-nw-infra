@@ -46,3 +46,7 @@ variable "vpn" {
     remote_cidr   = list(string)
   })
 }
+
+variable "external_lb" {
+  type = object({ vpc= string })
+}
