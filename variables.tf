@@ -58,11 +58,3 @@ variable "internal_lb" {
 variable "dns" {
   type = object ({ public_domain = string, private_domain = string, vpc = string})
 }
-
-variable "cluster_name" {
-}
- 
-variable "node_count" {
-  default     = 2
-}
- 
