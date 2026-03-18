@@ -44,5 +44,5 @@ jobs:
     # if needs apply to be done on merging to main or push to main
     # - name: 'Terraform Apply'
     #   if: github.ref == 'refs/head/main' and github.event_name == 'push'
-    #   run: terraform apply -auto-approve
+    #   run: terraform apply -var-file=env/dev/terraform.tfvars -auto-approve
     
