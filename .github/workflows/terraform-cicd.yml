@@ -35,11 +35,11 @@ jobs:
       run: terraform plan -var-file=env/dev/terraform.tfvars
 
     # Uncomment below if you want automatic apply
-    # - name: 'Terraform Apply'
-    #   run: terraform apply -var-file=env/dev/terraform.tfvars -auto-approve
+    - name: 'Terraform Apply'
+      run: terraform apply -var-file=env/dev/terraform.tfvars -auto-approve
 
-    # - name: 'Terraform Output'
-    #   run: terraform output
+    - name: 'Terraform Output'
+      run: terraform output
 
     # if needs apply to be done on merging to main or push to main
     # - name: 'Terraform Apply'
